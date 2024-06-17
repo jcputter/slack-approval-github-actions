@@ -6,7 +6,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.188.0",
+    "@aws-sdk/client-dynamodb": "^3.598.0",
     "@aws-sdk/client-sqs": "3.577.0",
     "@slack/web-api": "^6.2.0",
     "redis": "^4.6.14",
