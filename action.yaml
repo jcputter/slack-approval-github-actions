@@ -1,0 +1,42 @@
+name: 'Deployment Approval'
+description: 'Send a deployment approval message to Slack and update the DynamoDB table based on approvals.'
+author: 'jcputter@gmail.com'
+inputs:
+  SLACK_CHANNEL:
+    description: 'The Slack channel to send the deployment approval message.'
+    required: true
+  SLACK_TOKEN:
+    description: 'The Slack token for authentication.'
+    required: true
+  DYNAMODB_TABLE:
+    description: 'The DynamoDB table name for storing deployment approval information.'
+    required: true
+  AWS_REGION:
+    description: 'The AWS region where the DynamoDB table is located.'
+    required: true
+  AWS_ACCESS_KEY:
+    description: 'The AWS region where the DynamoDB table is located.'
+    required: true
+  AWS_SECRET_KEY:
+    description: 'The AWS region where the DynamoDB table is located.'
+    required: true
+  REDIS_HOST:
+    description: 'The URL of the SQS queue to process approval requests'
+    required: true
+  SERVICE:
+    description: 'The service being deployed.'
+    required: true
+  ENVIRONMENT:
+    description: 'The environment for the deployment.'
+    required: true
+outputs:
+  approval-status:
+    description: 'The status of the deployment approval.'
+
+runs:
+  using: 'node20'
+  main: 'index.js'
+
+branding:
+  icon: 'check-circle'
+  color: 'blue'
