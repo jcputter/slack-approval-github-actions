@@ -1,5 +1,5 @@
 name: 'Deployment Approval'
-description: 'Send a deployment approval message to Slack and update the DynamoDB table based on approvals.'
+description: 'Handles deployment approvals via Slack'
 author: 'jcputter@gmail.com'
 inputs:
   SLACK_CHANNEL:
